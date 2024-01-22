@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Air Fryer Conversion</title>
+</head>
+
+<body>
+    <h2>Oven Settings</h2>
+    <div id="oven">
+        <div class="time">
+            <label for="ovenTime">Time (mins)</label><br />
+            <input type="number" name="ovenTime" id="ovenTime" placeholder="20" min="0">
+        </div>
+        <div class="temp">
+            <label for="ovenTemp">Regular Temp (°C)</label><br />
+            <input type="number" name="ovenTemp" id="ovenTemp" placeholder="200" min="0" max="260">
+        </div>
+        <div class="fanTemp">
+            <label for="ovenFanTemp">Fan Temp (°C)</label><br />
+            <input type="number" name="ovenFanTemp" id="ovenFanTemp" placeholder="180" min="0" max="240">
+        </div>
+    </div>
+    <img src="images/arrow-down.svg" alt="" id="arrow">
+    <h2>Air Fryer Settings</h2>
+    <div id="air">
+        <div class="time">
+            <div>Time</div>
+            <div id="AFTime">16</div>
+        </div>
+        <div class="temp">
+            <div>Temp (°C)</div>
+            <div id="AFTemp">160</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

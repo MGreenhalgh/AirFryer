@@ -1,0 +1,128 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+    --textColor: #000;
+    --backgroundColor: #fff;
+    --foregroundColor: #ccc;
+    --accentColor: #aaa;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --textColor: #eee;
+        --backgroundColor: #1c1b22;
+        --foregroundColor: #2b2a33;
+        --accentColor: #207394;
+    }
+
+    #arrow {
+        filter: brightness(0) invert(1);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 30px;
+    color: var(--textColor);
+    background: var(--backgroundColor);
+    font-size: large;
+}
+
+button {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    filter: brightness(1.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input {
+    all: unset;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 40px;
+    color: var(--textColor);
+    background-color: var(--foregroundColor);
+    border-radius: 10px
+}
+
+#arrow {
+    height: 150px;
+    margin: 30px 0;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+h2,
+#oven,
+#arrow,
+#air {
+    width: 100%;
+    text-align: center;
+}
+
+#oven {
+    display: grid;
+    grid-template-areas:
+        "time time"
+        "temp fan";
+    row-gap: 20px;
+}
+
+.time {
+    grid-area: time;
+}
+
+.temp {
+    grid-area: temp;
+}
+
+.fanTemp {
+    grid-area: fan;
+    font-weight: bolder;
+}
+
+#air {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+#air>div {
+    width: 150px;
+}
+
+#AFTime,
+#AFTemp {
+    font-size: 80px;
+    font-weight: bolder;
+}
