@@ -23,9 +23,8 @@ const UpdateTemps = (e) => {
             break;
         }
         case "ovenFanTemp": {
-            ovenTemp.value = e.target.value + 20
+            ovenTemp.value = Number(e.target.value) + 20
             AFTemp.innerHTML = e.target.value - 20
-
         }
     }
 }
