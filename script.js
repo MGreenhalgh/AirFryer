@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const ovenFanTemp = document.getElementById("ovenFanTemp")
     const AFTemp = document.getElementById("AFTemp")
 
-    document.querySelectorAll("input").forEach(i => { i.addEventListener("change", UpdateTemps) });
+    document.querySelectorAll("input").forEach(i => {
+        i.addEventListener("change", UpdateTemps)
+        i.addEventListener("click", i.select)
+        i.addEventListener("mouseup", e => { e.preventDefault() })
+    });
 });
 
 
